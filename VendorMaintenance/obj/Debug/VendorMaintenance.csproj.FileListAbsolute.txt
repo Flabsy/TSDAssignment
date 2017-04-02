@@ -1,0 +1,77 @@
+C:\Documents and Settings\anne\My Documents\ADO.NET 3.5 C# applications\Book applications\Chapter 14\VendorMaintenance\bin\Debug\VendorMaintenance.exe.config
+C:\Documents and Settings\anne\My Documents\ADO.NET 3.5 C# applications\Book applications\Chapter 14\VendorMaintenance\bin\Debug\VendorMaintenance.exe
+C:\Documents and Settings\anne\My Documents\ADO.NET 3.5 C# applications\Book applications\Chapter 14\VendorMaintenance\bin\Debug\VendorMaintenance.pdb
+C:\Documents and Settings\anne\My Documents\ADO.NET 3.5 C# applications\Book applications\Chapter 14\VendorMaintenance\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\anne\My Documents\ADO.NET 3.5 C# applications\Book applications\Chapter 14\VendorMaintenance\obj\Debug\VendorMaintenance.frmAddModifyVendor.resources
+C:\Documents and Settings\anne\My Documents\ADO.NET 3.5 C# applications\Book applications\Chapter 14\VendorMaintenance\obj\Debug\VendorMaintenance.frmVendorMaintenance.resources
+C:\Documents and Settings\anne\My Documents\ADO.NET 3.5 C# applications\Book applications\Chapter 14\VendorMaintenance\obj\Debug\VendorMaintenance.Properties.Resources.resources
+C:\Documents and Settings\anne\My Documents\ADO.NET 3.5 C# applications\Book applications\Chapter 14\VendorMaintenance\obj\Debug\VendorMaintenance.csproj.GenerateResource.Cache
+C:\Documents and Settings\anne\My Documents\ADO.NET 3.5 C# applications\Book applications\Chapter 14\VendorMaintenance\obj\Debug\VendorMaintenance.exe
+C:\Documents and Settings\anne\My Documents\ADO.NET 3.5 C# applications\Book applications\Chapter 14\VendorMaintenance\obj\Debug\VendorMaintenance.pdb
+C:\temp\CSharp\Level2\Book applications\Chapter 14\VendorMaintenance\bin\Debug\VendorMaintenance.exe.config
+C:\temp\CSharp\Level2\Book applications\Chapter 14\VendorMaintenance\obj\Debug\VendorMaintenance.exe
+C:\temp\CSharp\Level2\Book applications\Chapter 14\VendorMaintenance\obj\Debug\VendorMaintenance.pdb
+C:\temp\CSharp\Level2\Book applications\Chapter 14\VendorMaintenance\bin\Debug\VendorMaintenance.exe
+C:\temp\CSharp\Level2\Book applications\Chapter 14\VendorMaintenance\bin\Debug\VendorMaintenance.pdb
+C:\temp\CSharp\Level2\Book applications\Chapter 14\VendorMaintenance\obj\Debug\ResolveAssemblyReference.cache
+C:\temp\CSharp\Level2\Book applications\Chapter 14\VendorMaintenance\obj\Debug\VendorMaintenance.frmAddModifyVendor.resources
+C:\temp\CSharp\Level2\Book applications\Chapter 14\VendorMaintenance\obj\Debug\VendorMaintenance.frmVendorMaintenance.resources
+C:\temp\CSharp\Level2\Book applications\Chapter 14\VendorMaintenance\obj\Debug\VendorMaintenance.Properties.Resources.resources
+C:\temp\CSharp\Level2\Book applications\Chapter 14\VendorMaintenance\obj\Debug\VendorMaintenance.csproj.GenerateResource.Cache
+G:\temp\4TSD_Chapter 14_Ass2\VendorMaintenance\bin\Debug\VendorMaintenance.exe.config
+G:\temp\4TSD_Chapter 14_Ass2\VendorMaintenance\obj\Debug\VendorMaintenance.exe
+G:\temp\4TSD_Chapter 14_Ass2\VendorMaintenance\obj\Debug\VendorMaintenance.pdb
+G:\4TSD\Resources\Assignment2\VendorMaintenance\bin\Debug\VendorMaintenance.exe.config
+G:\4TSD\Resources\Assignment2\VendorMaintenance\obj\Debug\VendorMaintenance.exe
+G:\4TSD\Resources\Assignment2\VendorMaintenance\obj\Debug\VendorMaintenance.pdb
+G:\4TSD\Resources\Assignment2\VendorMaintenance\bin\Debug\VendorMaintenance.exe
+G:\4TSD\Resources\Assignment2\VendorMaintenance\bin\Debug\VendorMaintenance.pdb
+G:\4TSD\Resources\Assignment2\VendorMaintenance\obj\Debug\ResolveAssemblyReference.cache
+G:\4TSD\Resources\Assignment2\VendorMaintenance\obj\Debug\VendorMaintenance.frmAddModifyVendor.resources
+G:\4TSD\Resources\Assignment2\VendorMaintenance\obj\Debug\VendorMaintenance.frmVendorMaintenance.resources
+G:\4TSD\Resources\Assignment2\VendorMaintenance\obj\Debug\VendorMaintenance.Properties.Resources.resources
+G:\4TSD\Resources\Assignment2\VendorMaintenance\obj\Debug\VendorMaintenance.csproj.GenerateResource.Cache
+G:\4TSD\Assessments\Assignment2\VendorMaintenance\bin\Debug\VendorMaintenance.exe.config
+G:\4TSD\Assessments\Assignment2\VendorMaintenance\obj\Debug\VendorMaintenance.exe
+G:\4TSD\Assessments\Assignment2\VendorMaintenance\obj\Debug\VendorMaintenance.pdb
+C:\Tafe_Work\2011-1\4TSD\Resources\Assessment\Assignment2\VendorMaintenance\bin\Debug\VendorMaintenance.exe.config
+C:\Tafe_Work\2011-1\4TSD\Resources\Assessment\Assignment2\VendorMaintenance\bin\Debug\VendorMaintenance.exe
+C:\Tafe_Work\2011-1\4TSD\Resources\Assessment\Assignment2\VendorMaintenance\bin\Debug\VendorMaintenance.pdb
+C:\Tafe_Work\2011-1\4TSD\Resources\Assessment\Assignment2\VendorMaintenance\obj\Debug\ResolveAssemblyReference.cache
+C:\Tafe_Work\2011-1\4TSD\Resources\Assessment\Assignment2\VendorMaintenance\obj\Debug\VendorMaintenance.frmAddModifyVendor.resources
+C:\Tafe_Work\2011-1\4TSD\Resources\Assessment\Assignment2\VendorMaintenance\obj\Debug\VendorMaintenance.frmVendorMaintenance.resources
+C:\Tafe_Work\2011-1\4TSD\Resources\Assessment\Assignment2\VendorMaintenance\obj\Debug\VendorMaintenance.Properties.Resources.resources
+C:\Tafe_Work\2011-1\4TSD\Resources\Assessment\Assignment2\VendorMaintenance\obj\Debug\ResGen.read.1.tlog
+C:\Tafe_Work\2011-1\4TSD\Resources\Assessment\Assignment2\VendorMaintenance\obj\Debug\ResGen.write.1.tlog
+C:\Tafe_Work\2011-1\4TSD\Resources\Assessment\Assignment2\VendorMaintenance\obj\Debug\VendorMaintenance.exe
+C:\Tafe_Work\2011-1\4TSD\Resources\Assessment\Assignment2\VendorMaintenance\obj\Debug\VendorMaintenance.pdb
+C:\TAFE\2011_S2\4TSD\Assessments\Assignment2\Student Files\VendorMaintenance\bin\Debug\VendorMaintenance.exe.config
+C:\TAFE\2011_S2\4TSD\Assessments\Assignment2\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.exe
+C:\TAFE\2011_S2\4TSD\Assessments\Assignment2\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.pdb
+C:\TAFE\2011_S2\4TSD\Assessments\Assignment2\Student Files\VendorMaintenance\bin\Debug\VendorMaintenance.exe
+C:\TAFE\2011_S2\4TSD\Assessments\Assignment2\Student Files\VendorMaintenance\bin\Debug\VendorMaintenance.pdb
+C:\TAFE\2011_S2\4TSD\Assessments\Assignment2\Student Files\VendorMaintenance\obj\Debug\ResolveAssemblyReference.cache
+C:\TAFE\2011_S2\4TSD\Assessments\Assignment2\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.frmAddModifyVendor.resources
+C:\TAFE\2011_S2\4TSD\Assessments\Assignment2\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.frmVendorMaintenance.resources
+C:\TAFE\2011_S2\4TSD\Assessments\Assignment2\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.Properties.Resources.resources
+C:\TAFE\2011_S2\4TSD\Assessments\Assignment2\Student Files\VendorMaintenance\obj\Debug\ResGen.read.1.tlog
+C:\TAFE\2011_S2\4TSD\Assessments\Assignment2\Student Files\VendorMaintenance\obj\Debug\ResGen.write.1.tlog
+C:\TAFE\2012_S2\5TSD\Assessments\Assignment1\Student Files\VendorMaintenance\bin\Debug\VendorMaintenance.exe.config
+C:\TAFE\2012_S2\5TSD\Assessments\Assignment1\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.exe
+C:\TAFE\2012_S2\5TSD\Assessments\Assignment1\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.pdb
+C:\TAFESA\2014_S1\5TSD\Assessments\Assignment (Part1)\Student Files\VendorMaintenance\bin\Debug\VendorMaintenance.exe.config
+C:\TAFESA\2014_S1\5TSD\Assessments\Assignment (Part1)\Student Files\VendorMaintenance\bin\Debug\VendorMaintenance.exe
+C:\TAFESA\2014_S1\5TSD\Assessments\Assignment (Part1)\Student Files\VendorMaintenance\bin\Debug\VendorMaintenance.pdb
+C:\TAFESA\2014_S1\5TSD\Assessments\Assignment (Part1)\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.csprojResolveAssemblyReference.cache
+C:\TAFESA\2014_S1\5TSD\Assessments\Assignment (Part1)\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.Properties.Resources.resources
+C:\TAFESA\2014_S1\5TSD\Assessments\Assignment (Part1)\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.csproj.GenerateResource.Cache
+C:\TAFESA\2014_S1\5TSD\Assessments\Assignment (Part1)\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.exe
+C:\TAFESA\2014_S1\5TSD\Assessments\Assignment (Part1)\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.pdb
+D:\MyTafe\2017_S1\5TSD\Resources\Assignment (Part 1)\Student Files\VendorMaintenance\bin\Debug\VendorMaintenance.exe.config
+D:\MyTafe\2017_S1\5TSD\Resources\Assignment (Part 1)\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.exe
+D:\MyTafe\2017_S1\5TSD\Resources\Assignment (Part 1)\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.pdb
+D:\MyTafe\2017_S1\5TSD\Resources\Assignment (Part 1)\Student Files\VendorMaintenance\bin\Debug\VendorMaintenance.exe
+D:\MyTafe\2017_S1\5TSD\Resources\Assignment (Part 1)\Student Files\VendorMaintenance\bin\Debug\VendorMaintenance.pdb
+D:\MyTafe\2017_S1\5TSD\Resources\Assignment (Part 1)\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.csprojResolveAssemblyReference.cache
+D:\MyTafe\2017_S1\5TSD\Resources\Assignment (Part 1)\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.Properties.Resources.resources
+D:\MyTafe\2017_S1\5TSD\Resources\Assignment (Part 1)\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.csproj.GenerateResource.Cache
