@@ -75,3 +75,5 @@ D:\MyTafe\2017_S1\5TSD\Resources\Assignment (Part 1)\Student Files\VendorMainten
 D:\MyTafe\2017_S1\5TSD\Resources\Assignment (Part 1)\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.csprojResolveAssemblyReference.cache
 D:\MyTafe\2017_S1\5TSD\Resources\Assignment (Part 1)\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.Properties.Resources.resources
 D:\MyTafe\2017_S1\5TSD\Resources\Assignment (Part 1)\Student Files\VendorMaintenance\obj\Debug\VendorMaintenance.csproj.GenerateResource.Cache
+C:\LocalWorkingFolder\TSDAssignment\VendorMaintenance\bin\Debug\VendorMaintenance.exe.config
+C:\LocalWorkingFolder\TSDAssignment\VendorMaintenance\obj\Debug\VendorMaintenance.pdb
