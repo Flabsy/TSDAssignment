@@ -15,7 +15,7 @@ namespace VendorMaintenance
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmVendorMaintenance());
+            Application.Run(new frmTerm());
         }
     }
 }
