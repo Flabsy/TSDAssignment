@@ -134,5 +134,11 @@ namespace VendorMaintenance
         {
             this.Close();
         }
+
+        private void btnGoToInvoice_Click(object sender, EventArgs e)
+        {
+            var newForm = new frmInvoice();
+            newForm.Show();
+        }
     }
 }

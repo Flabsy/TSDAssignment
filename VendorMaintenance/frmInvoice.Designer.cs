@@ -34,7 +34,7 @@
             this.txtViewInvoiceNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtInvoiceDate = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtVendorID = new System.Windows.Forms.TextBox();
             this.txtInvoiceTotal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTermsID = new System.Windows.Forms.TextBox();
@@ -101,13 +101,13 @@
             this.txtInvoiceDate.Size = new System.Drawing.Size(100, 20);
             this.txtInvoiceDate.TabIndex = 5;
             // 
-            // textBox1
+            // txtVendorID
             // 
-            this.textBox1.Location = new System.Drawing.Point(255, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtVendorID.Location = new System.Drawing.Point(255, 48);
+            this.txtVendorID.Name = "txtVendorID";
+            this.txtVendorID.ReadOnly = true;
+            this.txtVendorID.Size = new System.Drawing.Size(100, 20);
+            this.txtVendorID.TabIndex = 6;
             // 
             // txtInvoiceTotal
             // 
@@ -248,7 +248,7 @@
             this.Controls.Add(this.txtTermsID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtInvoiceTotal);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtVendorID);
             this.Controls.Add(this.txtInvoiceDate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtViewInvoiceNo);
@@ -270,7 +270,7 @@
         private System.Windows.Forms.TextBox txtViewInvoiceNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtInvoiceDate;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtVendorID;
         private System.Windows.Forms.TextBox txtInvoiceTotal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTermsID;
