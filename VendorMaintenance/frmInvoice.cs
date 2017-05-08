@@ -19,8 +19,9 @@ namespace VendorMaintenance
 
         
         Invoice selectedInvoice;
+        List<InvoiceLineItem> selectedLineItems;
 
-        private void btnGetVendor_Click(object sender, EventArgs e)
+        private void btnGetInvoice_Click(object sender, EventArgs e)
         {
             if (Validator.IsPresent(txtInvoiceNo))
             {
@@ -30,6 +31,12 @@ namespace VendorMaintenance
                         (from invoice in DataContext.payables.Invoices
                          where invoice.InvoiceNumber == txtInvoiceNo.Text
                          select invoice).Single();
+
+                    selectedLineItems =
+                        (from invoicelineitem in DataContext.payables.InvoiceLineItems
+                         where invoicelineitem.InvoiceID == selectedInvoice.InvoiceID
+                         select invoicelineitem).ToList();
+
                     this.DisplayInvoice();
                 }
                 catch (InvalidOperationException)
@@ -58,6 +65,17 @@ namespace VendorMaintenance
             txtTermsID.Text = selectedInvoice.TermsID.ToString();
             txtPaymentDate.Text = selectedInvoice.PaymentDate.ToString();
             txtDueDate.Text = selectedInvoice.DueDate.ToString();
+
+            lboxInvoiceLineItems.Items.Clear();
+            //lboxInvoiceLineItems.ValueMember = "invoicesequence";
+            lboxInvoiceLineItems.DataSource = selectedLineItems;
+
+            //foreach (var lineItem in selectedLineItems)
+            //{
+            //    lboxInvoiceLineItems.Items.Add(lineItem.Description + ": $" + Math.Round(lineItem.Amount, 2).ToString());
+            //}
+
+
             //btnModify.Enabled = true;
             //btnDelete.Enabled = true;
         }
@@ -73,8 +91,12 @@ namespace VendorMaintenance
             txtTermsID.Text = "";
             txtPaymentDate.Text = "";
             txtDueDate.Text = "";
+            lboxInvoiceLineItems.Items.Clear();
             //btnModify.Enabled = false;
             //btnDelete.Enabled = false;
+
+
+
         }
 
     }
