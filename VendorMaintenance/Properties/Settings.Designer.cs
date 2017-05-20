@@ -33,5 +33,29 @@ namespace VendorMaintenance.Properties {
                 return ((string)(this["PayablesConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=NATHANPC\\SQLEXPRESS;Initial Catalog=\"D:\\5TSD - TEAM BASED SOFTWARE DE" +
+            "VELOPMENT\\ASSIGNMENT\\ASSIGNMENT (PART 1)_V1_170318\\DATABASE FILES\\PAYABLES.MDF\";" +
+            "Integrated Security=True")]
+        public string D__5TSD___TEAM_BASED_SOFTWARE_DEVELOPMENT_ASSIGNMENT_ASSIGNMENT__PART_1__V1_170318_DATABASE_FILES_PAYABLES_MDFConnection {
+            get {
+                return ((string)(this["D__5TSD___TEAM_BASED_SOFTWARE_DEVELOPMENT_ASSIGNMENT_ASSIGNMENT__PART_1__V1_17031" +
+                    "8_DATABASE_FILES_PAYABLES_MDFConnection"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Payables;Integrated Security=Tru" +
+            "e")]
+        public string PayablesConnectionString1 {
+            get {
+                return ((string)(this["PayablesConnectionString1"]));
+            }
+        }
     }
 }

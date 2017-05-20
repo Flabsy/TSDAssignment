@@ -6,7 +6,7 @@ using System.Data.Linq;
 
 namespace VendorMaintenance
 {
-    public static class DataContext
+    public class DataContext
     {
         public static PayablesDataContext payables = new PayablesDataContext();
         public static bool vendorDeleted;

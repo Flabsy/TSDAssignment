@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.Linq;
+using System.Linq.Expressions;
 
 namespace VendorMaintenance
 {
@@ -16,7 +17,7 @@ namespace VendorMaintenance
         {
             InitializeComponent();
         }
-
+        
         Vendor selectedVendor;
 
         private void btnGetVendor_Click(object sender, EventArgs e)
@@ -133,6 +134,12 @@ namespace VendorMaintenance
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_link_frmSummaryVendor_Click(object sender, EventArgs e)
+        {
+            frmSummaryVendor frm_SummaryVendor = new frmSummaryVendor();
+            frm_SummaryVendor.Show();
         }
     }
 }

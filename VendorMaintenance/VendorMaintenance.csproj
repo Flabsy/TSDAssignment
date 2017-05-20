@@ -61,6 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataContext.cs" />
+    <Compile Include="frmAddModifySummaryVendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddModifySummaryVendor.Designer.cs">
+      <DependentUpon>frmAddModifySummaryVendor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddModifyVendor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Payables.dbml</DependentUpon>
     </Compile>
+    <Compile Include="PayablesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PayablesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="app.config">
@@ -92,6 +103,15 @@
     <None Include="Payables.dbml.layout">
       <DependentUpon>Payables.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="frmAddModifySummaryVendor.resx">
+      <DependentUpon>frmAddModifySummaryVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSummaryVendor.resx">
+      <DependentUpon>frmSummaryVendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendorMaintenance.resx">
+      <DependentUpon>frmVendorMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -106,6 +126,17 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>Payables.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="PayablesDataSet.xsc">
+      <DependentUpon>PayablesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PayablesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PayablesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PayablesDataSet.xss">
+      <DependentUpon>PayablesDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
