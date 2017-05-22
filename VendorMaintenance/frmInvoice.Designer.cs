@@ -34,10 +34,10 @@
             this.txtViewInvoiceNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtInvoiceDate = new System.Windows.Forms.TextBox();
-            this.txtVendorID = new System.Windows.Forms.TextBox();
+            this.txtVendor = new System.Windows.Forms.TextBox();
             this.txtInvoiceTotal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtTermsID = new System.Windows.Forms.TextBox();
+            this.txtTerms = new System.Windows.Forms.TextBox();
             this.txtDueDate = new System.Windows.Forms.TextBox();
             this.txtPaymentTotal = new System.Windows.Forms.TextBox();
             this.txtCreditTotal = new System.Windows.Forms.TextBox();
@@ -50,6 +50,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lboxInvoiceLineItems = new System.Windows.Forms.ListBox();
+            this.btnAddInvoiceItem = new System.Windows.Forms.Button();
+            this.btnModifyInvoiceItem = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -80,7 +82,7 @@
             // 
             // txtViewInvoiceNo
             // 
-            this.txtViewInvoiceNo.Location = new System.Drawing.Point(88, 53);
+            this.txtViewInvoiceNo.Location = new System.Drawing.Point(149, 41);
             this.txtViewInvoiceNo.Name = "txtViewInvoiceNo";
             this.txtViewInvoiceNo.ReadOnly = true;
             this.txtViewInvoiceNo.Size = new System.Drawing.Size(100, 20);
@@ -89,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 56);
+            this.label2.Location = new System.Drawing.Point(100, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 4;
@@ -103,13 +105,13 @@
             this.txtInvoiceDate.Size = new System.Drawing.Size(252, 20);
             this.txtInvoiceDate.TabIndex = 5;
             // 
-            // txtVendorID
+            // txtVendor
             // 
-            this.txtVendorID.Location = new System.Drawing.Point(255, 53);
-            this.txtVendorID.Name = "txtVendorID";
-            this.txtVendorID.ReadOnly = true;
-            this.txtVendorID.Size = new System.Drawing.Size(100, 20);
-            this.txtVendorID.TabIndex = 6;
+            this.txtVendor.Location = new System.Drawing.Point(88, 67);
+            this.txtVendor.Name = "txtVendor";
+            this.txtVendor.ReadOnly = true;
+            this.txtVendor.Size = new System.Drawing.Size(267, 20);
+            this.txtVendor.TabIndex = 6;
             // 
             // txtInvoiceTotal
             // 
@@ -122,19 +124,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(194, 56);
+            this.label3.Location = new System.Drawing.Point(42, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 8;
-            this.label3.Text = "VendorID:";
+            this.label3.Text = "Vendor:";
             // 
-            // txtTermsID
+            // txtTerms
             // 
-            this.txtTermsID.Location = new System.Drawing.Point(103, 145);
-            this.txtTermsID.Name = "txtTermsID";
-            this.txtTermsID.ReadOnly = true;
-            this.txtTermsID.Size = new System.Drawing.Size(252, 20);
-            this.txtTermsID.TabIndex = 9;
+            this.txtTerms.Location = new System.Drawing.Point(103, 145);
+            this.txtTerms.Name = "txtTerms";
+            this.txtTerms.ReadOnly = true;
+            this.txtTerms.Size = new System.Drawing.Size(252, 20);
+            this.txtTerms.TabIndex = 9;
             // 
             // txtDueDate
             // 
@@ -189,11 +191,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(44, 148);
+            this.label6.Location = new System.Drawing.Point(58, 148);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Terms ID:";
+            this.label6.Text = "Terms:";
             // 
             // label7
             // 
@@ -239,11 +241,33 @@
             this.lboxInvoiceLineItems.Size = new System.Drawing.Size(298, 95);
             this.lboxInvoiceLineItems.TabIndex = 21;
             // 
+            // btnAddInvoiceItem
+            // 
+            this.btnAddInvoiceItem.Location = new System.Drawing.Point(3, 433);
+            this.btnAddInvoiceItem.Name = "btnAddInvoiceItem";
+            this.btnAddInvoiceItem.Size = new System.Drawing.Size(117, 23);
+            this.btnAddInvoiceItem.TabIndex = 22;
+            this.btnAddInvoiceItem.Text = "Add Invoice Item";
+            this.btnAddInvoiceItem.UseVisualStyleBackColor = true;
+            this.btnAddInvoiceItem.Click += new System.EventHandler(this.btnAddInvoiceItem_Click);
+            // 
+            // btnModifyInvoiceItem
+            // 
+            this.btnModifyInvoiceItem.Location = new System.Drawing.Point(126, 433);
+            this.btnModifyInvoiceItem.Name = "btnModifyInvoiceItem";
+            this.btnModifyInvoiceItem.Size = new System.Drawing.Size(114, 23);
+            this.btnModifyInvoiceItem.TabIndex = 23;
+            this.btnModifyInvoiceItem.Text = "Modify Invoice Item";
+            this.btnModifyInvoiceItem.UseVisualStyleBackColor = true;
+            this.btnModifyInvoiceItem.Click += new System.EventHandler(this.btnModifyInvoiceItem_Click);
+            // 
             // frmInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 474);
+            this.ClientSize = new System.Drawing.Size(371, 474);
+            this.Controls.Add(this.btnModifyInvoiceItem);
+            this.Controls.Add(this.btnAddInvoiceItem);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -255,10 +279,10 @@
             this.Controls.Add(this.txtCreditTotal);
             this.Controls.Add(this.txtPaymentTotal);
             this.Controls.Add(this.txtDueDate);
-            this.Controls.Add(this.txtTermsID);
+            this.Controls.Add(this.txtTerms);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtInvoiceTotal);
-            this.Controls.Add(this.txtVendorID);
+            this.Controls.Add(this.txtVendor);
             this.Controls.Add(this.txtInvoiceDate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtViewInvoiceNo);
@@ -281,10 +305,10 @@
         private System.Windows.Forms.TextBox txtViewInvoiceNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtInvoiceDate;
-        private System.Windows.Forms.TextBox txtVendorID;
+        private System.Windows.Forms.TextBox txtVendor;
         private System.Windows.Forms.TextBox txtInvoiceTotal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtTermsID;
+        private System.Windows.Forms.TextBox txtTerms;
         private System.Windows.Forms.TextBox txtDueDate;
         private System.Windows.Forms.TextBox txtPaymentTotal;
         private System.Windows.Forms.TextBox txtCreditTotal;
@@ -297,5 +321,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListBox lboxInvoiceLineItems;
+        private System.Windows.Forms.Button btnAddInvoiceItem;
+        private System.Windows.Forms.Button btnModifyInvoiceItem;
     }
 }

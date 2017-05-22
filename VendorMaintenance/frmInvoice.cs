@@ -20,6 +20,8 @@ namespace VendorMaintenance
         
         Invoice selectedInvoice;
         List<InvoiceLineItem> selectedLineItems;
+        Term selectedTerms;
+        Vendor selectedVendor;
 
         private void btnGetInvoice_Click(object sender, EventArgs e)
         {
@@ -32,6 +34,14 @@ namespace VendorMaintenance
                          where invoice.InvoiceNumber == txtInvoiceNo.Text
                          select invoice).Single();
 
+                    selectedTerms = (from term in DataContext.payables.Terms
+                                          where term.TermsID == selectedInvoice.TermsID
+                                          select term).Single();
+
+                    selectedVendor = (from vendor in DataContext.payables.Vendors
+                                      where vendor.VendorID == selectedInvoice.VendorID
+                                      select vendor).Single();
+                    
                     selectedLineItems =
                         (from invoicelineitem in DataContext.payables.InvoiceLineItems
                          where invoicelineitem.InvoiceID == selectedInvoice.InvoiceID
@@ -57,47 +67,101 @@ namespace VendorMaintenance
         private void DisplayInvoice()
         {
             txtViewInvoiceNo.Text = selectedInvoice.InvoiceNumber;
-            txtVendorID.Text = selectedInvoice.VendorID.ToString();
+            txtVendor.Text = selectedVendor.Name;
             txtInvoiceDate.Text = selectedInvoice.InvoiceDate.ToString();
-            txtPaymentTotal.Text = selectedInvoice.PaymentTotal.ToString();
-            txtInvoiceTotal.Text = selectedInvoice.InvoiceTotal.ToString();
-            txtCreditTotal.Text = selectedInvoice.CreditTotal.ToString();
-            txtTermsID.Text = selectedInvoice.TermsID.ToString();
+            txtPaymentTotal.Text = selectedInvoice.PaymentTotal.ToString("C");
+            txtInvoiceTotal.Text = selectedInvoice.InvoiceTotal.ToString("C");
+            txtCreditTotal.Text = selectedInvoice.CreditTotal.ToString("C");
+            txtTerms.Text = selectedTerms.Description;
             txtPaymentDate.Text = selectedInvoice.PaymentDate.ToString();
             txtDueDate.Text = selectedInvoice.DueDate.ToString();
-
-            lboxInvoiceLineItems.Items.Clear();
-            //lboxInvoiceLineItems.ValueMember = "invoicesequence";
             lboxInvoiceLineItems.DataSource = selectedLineItems;
-
-            //foreach (var lineItem in selectedLineItems)
-            //{
-            //    lboxInvoiceLineItems.Items.Add(lineItem.Description + ": $" + Math.Round(lineItem.Amount, 2).ToString());
-            //}
-
-
-            //btnModify.Enabled = true;
-            //btnDelete.Enabled = true;
         }
 
         private void ClearControls()
         {
             txtViewInvoiceNo.Text = "";
-            txtVendorID.Text = "";
+            txtVendor.Text = "";
             txtInvoiceDate.Text = "";
             txtPaymentTotal.Text = "";
             txtInvoiceTotal.Text = "";
             txtCreditTotal.Text = "";
-            txtTermsID.Text = "";
+            txtTerms.Text = "";
             txtPaymentDate.Text = "";
             txtDueDate.Text = "";
-            lboxInvoiceLineItems.Items.Clear();
-            //btnModify.Enabled = false;
-            //btnDelete.Enabled = false;
-
-
-
+            lboxInvoiceLineItems.DataSource = null;
         }
 
+        private void btnModifyInvoiceItem_Click(object sender, EventArgs e)
+        {
+
+            if (selectedInvoice == null)
+            {
+                MessageBox.Show("No invoice loaded.");
+                return;
+            }
+
+            if (lboxInvoiceLineItems.SelectedItem == null) 
+            {
+                MessageBox.Show("You must select a line item to modify.");
+                return;
+            }
+            object selectedLineItem = lboxInvoiceLineItems.SelectedItem;
+
+            frmAddModifyInvoiceLineItem editLineItemForm = new frmAddModifyInvoiceLineItem();
+
+            editLineItemForm.addInvoiceLineItem = false;
+            editLineItemForm.lineItem = (InvoiceLineItem)selectedLineItem;
+            editLineItemForm.invoiceID = selectedInvoice.InvoiceID;
+            editLineItemForm.invoice = selectedInvoice.InvoiceNumber;
+            editLineItemForm.DisplayLineItem();
+
+            DialogResult result = editLineItemForm.ShowDialog();
+            if (result == DialogResult.OK || result == DialogResult.Retry)
+            {
+                selectedLineItems[lboxInvoiceLineItems.SelectedIndex] = editLineItemForm.lineItem;
+
+                this.ClearControls();
+                this.DisplayInvoice();
+            }
+            
+        }
+
+        private void btnAddInvoiceItem_Click(object sender, EventArgs e)
+        {
+
+            if (selectedInvoice == null)
+            {
+                MessageBox.Show("No invoice loaded.");
+                return;
+            }
+            
+            frmAddModifyInvoiceLineItem editLineItemForm = new frmAddModifyInvoiceLineItem();
+
+            InvoiceLineItem lineItem = new InvoiceLineItem();
+            lineItem.InvoiceSequence = short.Parse((selectedLineItems.Count + 1).ToString());
+            lineItem.InvoiceID = selectedInvoice.InvoiceID;
+            editLineItemForm.addInvoiceLineItem = true;
+
+            editLineItemForm.lineItem = lineItem;
+            editLineItemForm.invoiceID = selectedInvoice.InvoiceID;
+            editLineItemForm.invoice = selectedInvoice.InvoiceNumber;
+            editLineItemForm.DisplayLineItem();
+
+            DialogResult result = editLineItemForm.ShowDialog();
+            if (result == DialogResult.OK || result == DialogResult.Retry)
+            {
+                selectedLineItems.Add(editLineItemForm.lineItem);
+
+                this.ClearControls();
+                this.DisplayInvoice();
+            } 
+            else if (result == DialogResult.Cancel)
+            {
+
+                this.ClearControls();
+                this.DisplayInvoice();
+            }
+        }
     }
 }
