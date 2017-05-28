@@ -19,7 +19,6 @@ namespace VendorMaintenance
         public string invoice;
         public int invoiceID;
 
-
         public frmAddModifyInvoiceLineItem()
         {
             InitializeComponent();
@@ -34,18 +33,12 @@ namespace VendorMaintenance
             txtInvoiceNo.Text = this.invoice;
             txtItemNo.Text = lineItem.InvoiceSequence.ToString();
 
-            //List<InvoiceLineItem> accounts = from GLAccount in DataContext.payables.GLAccounts
-            //           orderby GLAccount.AccountNo
-            //           select new { GLAccount.AccountNo, GLAccount.Description };
-
             var accounts = (from acc in DataContext.payables.GLAccounts select acc);
-
             var accountDict = new Dictionary<int, string>();
             foreach (var acc in accounts)
             {
                 accountDict.Add(acc.AccountNo, acc.AccountNo + ": " + acc.Description);
             }
-
             cboxAccNo.DataSource = accountDict.ToList();
             cboxAccNo.DisplayMember = "Value";
             cboxAccNo.ValueMember = "Key";
@@ -97,8 +90,6 @@ namespace VendorMaintenance
             }
             lineItem.InvoiceID = invoiceID;
             lineItem.InvoiceSequence = short.Parse(txtItemNo.Text);
-
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -151,5 +142,38 @@ namespace VendorMaintenance
                 }
             }
     }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = 
+                MessageBox.Show("Delete invoice item " + lineItem.InvoiceSequence.ToString() + "?",
+                "Confirm Delete", MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    DataContext.payables.InvoiceLineItems.DeleteOnSubmit(lineItem);
+                    DataContext.payables.SubmitChanges();
+                    lineItem = new InvoiceLineItem();
+                    this.DialogResult = DialogResult.OK;
+                }
+                catch (ChangeConflictException)
+                {
+                    DataContext.GetCurrentValues();
+                    MessageBox.Show("Another user has updated that item.",
+                        "Database Error");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, ex.GetType().ToString());
+                }
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

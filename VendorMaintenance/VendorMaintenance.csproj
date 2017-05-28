@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAddModifyInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddModifyInvoice.Designer.cs">
+      <DependentUpon>frmAddModifyInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddModifyInvoiceLineItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     <None Include="Payables.dbml.layout">
       <DependentUpon>Payables.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="frmAddModifyInvoice.resx">
+      <DependentUpon>frmAddModifyInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddModifyInvoiceLineItem.resx">
       <DependentUpon>frmAddModifyInvoiceLineItem.cs</DependentUpon>
     </EmbeddedResource>

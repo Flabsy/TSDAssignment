@@ -52,27 +52,31 @@
             this.lboxInvoiceLineItems = new System.Windows.Forms.ListBox();
             this.btnAddInvoiceItem = new System.Windows.Forms.Button();
             this.btnModifyInvoiceItem = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnAddInvoice = new System.Windows.Forms.Button();
+            this.btnModifyInvoice = new System.Windows.Forms.Button();
+            this.btnDeleteInvoice = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 15);
+            this.label1.Location = new System.Drawing.Point(20, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 13);
+            this.label1.Size = new System.Drawing.Size(133, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Invoice Number:";
+            this.label1.Text = "Search by invoice number:";
             // 
             // txtInvoiceNo
             // 
-            this.txtInvoiceNo.Location = new System.Drawing.Point(149, 12);
+            this.txtInvoiceNo.Location = new System.Drawing.Point(159, 12);
             this.txtInvoiceNo.Name = "txtInvoiceNo";
-            this.txtInvoiceNo.Size = new System.Drawing.Size(100, 20);
+            this.txtInvoiceNo.Size = new System.Drawing.Size(115, 20);
             this.txtInvoiceNo.TabIndex = 1;
             // 
             // btnGetInvoice
             // 
-            this.btnGetInvoice.Location = new System.Drawing.Point(255, 10);
+            this.btnGetInvoice.Location = new System.Drawing.Point(280, 10);
             this.btnGetInvoice.Name = "btnGetInvoice";
             this.btnGetInvoice.Size = new System.Drawing.Size(75, 23);
             this.btnGetInvoice.TabIndex = 2;
@@ -82,16 +86,16 @@
             // 
             // txtViewInvoiceNo
             // 
-            this.txtViewInvoiceNo.Location = new System.Drawing.Point(149, 41);
+            this.txtViewInvoiceNo.Location = new System.Drawing.Point(88, 41);
             this.txtViewInvoiceNo.Name = "txtViewInvoiceNo";
             this.txtViewInvoiceNo.ReadOnly = true;
-            this.txtViewInvoiceNo.Size = new System.Drawing.Size(100, 20);
+            this.txtViewInvoiceNo.Size = new System.Drawing.Size(132, 20);
             this.txtViewInvoiceNo.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 44);
+            this.label2.Location = new System.Drawing.Point(20, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 4;
@@ -124,7 +128,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 70);
+            this.label3.Location = new System.Drawing.Point(20, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 8;
@@ -173,16 +177,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 96);
+            this.label4.Location = new System.Drawing.Point(19, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(73, 13);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Date Made:";
+            this.label4.Text = "Date Created:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(63, 122);
+            this.label5.Location = new System.Drawing.Point(19, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 15;
@@ -191,7 +195,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(58, 148);
+            this.label6.Location = new System.Drawing.Point(20, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 16;
@@ -200,7 +204,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(41, 174);
+            this.label7.Location = new System.Drawing.Point(20, 174);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 13);
             this.label7.TabIndex = 17;
@@ -218,7 +222,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(33, 240);
+            this.label9.Location = new System.Drawing.Point(19, 240);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 13);
             this.label9.TabIndex = 19;
@@ -227,7 +231,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(42, 266);
+            this.label10.Location = new System.Drawing.Point(19, 266);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(57, 13);
             this.label10.TabIndex = 20;
@@ -236,16 +240,16 @@
             // lboxInvoiceLineItems
             // 
             this.lboxInvoiceLineItems.FormattingEnabled = true;
-            this.lboxInvoiceLineItems.Location = new System.Drawing.Point(45, 321);
+            this.lboxInvoiceLineItems.Location = new System.Drawing.Point(22, 302);
             this.lboxInvoiceLineItems.Name = "lboxInvoiceLineItems";
-            this.lboxInvoiceLineItems.Size = new System.Drawing.Size(298, 95);
+            this.lboxInvoiceLineItems.Size = new System.Drawing.Size(224, 121);
             this.lboxInvoiceLineItems.TabIndex = 21;
             // 
             // btnAddInvoiceItem
             // 
-            this.btnAddInvoiceItem.Location = new System.Drawing.Point(3, 433);
+            this.btnAddInvoiceItem.Location = new System.Drawing.Point(252, 400);
             this.btnAddInvoiceItem.Name = "btnAddInvoiceItem";
-            this.btnAddInvoiceItem.Size = new System.Drawing.Size(117, 23);
+            this.btnAddInvoiceItem.Size = new System.Drawing.Size(103, 23);
             this.btnAddInvoiceItem.TabIndex = 22;
             this.btnAddInvoiceItem.Text = "Add Invoice Item";
             this.btnAddInvoiceItem.UseVisualStyleBackColor = true;
@@ -253,19 +257,63 @@
             // 
             // btnModifyInvoiceItem
             // 
-            this.btnModifyInvoiceItem.Location = new System.Drawing.Point(126, 433);
+            this.btnModifyInvoiceItem.Location = new System.Drawing.Point(252, 302);
             this.btnModifyInvoiceItem.Name = "btnModifyInvoiceItem";
-            this.btnModifyInvoiceItem.Size = new System.Drawing.Size(114, 23);
+            this.btnModifyInvoiceItem.Size = new System.Drawing.Size(103, 50);
             this.btnModifyInvoiceItem.TabIndex = 23;
-            this.btnModifyInvoiceItem.Text = "Modify Invoice Item";
+            this.btnModifyInvoiceItem.Text = "Modify/Delete Selected Item";
             this.btnModifyInvoiceItem.UseVisualStyleBackColor = true;
             this.btnModifyInvoiceItem.Click += new System.EventHandler(this.btnModifyInvoiceItem_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(284, 438);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 24;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnAddInvoice
+            // 
+            this.btnAddInvoice.Location = new System.Drawing.Point(227, 39);
+            this.btnAddInvoice.Name = "btnAddInvoice";
+            this.btnAddInvoice.Size = new System.Drawing.Size(128, 23);
+            this.btnAddInvoice.TabIndex = 25;
+            this.btnAddInvoice.Text = "Create New Invoice";
+            this.btnAddInvoice.UseVisualStyleBackColor = true;
+            this.btnAddInvoice.Click += new System.EventHandler(this.btnAddInvoice_Click);
+            // 
+            // btnModifyInvoice
+            // 
+            this.btnModifyInvoice.Location = new System.Drawing.Point(12, 438);
+            this.btnModifyInvoice.Name = "btnModifyInvoice";
+            this.btnModifyInvoice.Size = new System.Drawing.Size(130, 23);
+            this.btnModifyInvoice.TabIndex = 26;
+            this.btnModifyInvoice.Text = "Modify Selected Invoice";
+            this.btnModifyInvoice.UseVisualStyleBackColor = true;
+            this.btnModifyInvoice.Click += new System.EventHandler(this.btnModifyInvoice_Click);
+            // 
+            // btnDeleteInvoice
+            // 
+            this.btnDeleteInvoice.Location = new System.Drawing.Point(148, 438);
+            this.btnDeleteInvoice.Name = "btnDeleteInvoice";
+            this.btnDeleteInvoice.Size = new System.Drawing.Size(130, 23);
+            this.btnDeleteInvoice.TabIndex = 27;
+            this.btnDeleteInvoice.Text = "Delete Selected Invoice";
+            this.btnDeleteInvoice.UseVisualStyleBackColor = true;
+            this.btnDeleteInvoice.Click += new System.EventHandler(this.btnDeleteInvoice_Click);
             // 
             // frmInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 474);
+            this.ClientSize = new System.Drawing.Size(375, 474);
+            this.Controls.Add(this.btnDeleteInvoice);
+            this.Controls.Add(this.btnModifyInvoice);
+            this.Controls.Add(this.btnAddInvoice);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnModifyInvoiceItem);
             this.Controls.Add(this.btnAddInvoiceItem);
             this.Controls.Add(this.label10);
@@ -291,7 +339,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lboxInvoiceLineItems);
             this.Name = "frmInvoice";
-            this.Text = "Invoice";
+            this.Text = "Invoice Maintenance";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +371,9 @@
         private System.Windows.Forms.ListBox lboxInvoiceLineItems;
         private System.Windows.Forms.Button btnAddInvoiceItem;
         private System.Windows.Forms.Button btnModifyInvoiceItem;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnAddInvoice;
+        private System.Windows.Forms.Button btnModifyInvoice;
+        private System.Windows.Forms.Button btnDeleteInvoice;
     }
 }

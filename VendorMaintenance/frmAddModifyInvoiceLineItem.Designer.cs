@@ -40,6 +40,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.cboxAccNo = new System.Windows.Forms.ComboBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtAmount
@@ -130,12 +131,13 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(287, 117);
+            this.btnCancel.Location = new System.Drawing.Point(279, 117);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // cboxAccNo
             // 
@@ -146,11 +148,22 @@
             this.cboxAccNo.Size = new System.Drawing.Size(171, 21);
             this.cboxAccNo.TabIndex = 12;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(179, 117);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 13;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // frmAddModifyInvoiceLineItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 147);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cboxAccNo);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -183,5 +196,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.ComboBox cboxAccNo;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
