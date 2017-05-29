@@ -5,35 +5,36 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Linq;
 
 namespace VendorMaintenance
 {
-    public partial class frmAddModifyVendor : Form
+    public partial class frmAddModifySummaryVendor : Form
     {
-        public frmAddModifyVendor()
+        public frmAddModifySummaryVendor()
         {
             InitializeComponent();
         }
 
-        public bool addVendor;
+        public bool addVendorSummary;
         public Vendor vendor;
-        
+        public VendorsSummary vendorSummary;
 
         private void frmAddModifyVendor_Load(object sender, EventArgs e)
         {
             this.LoadComboBoxes();
-            if (addVendor)
+            if (addVendorSummary)
             {
-                this.Text = "Add Vendor";
+                this.Text = "Add Vendor Summary";
                 cboStates.SelectedIndex = -1;
                 cboTerms.SelectedIndex = -1;
                 cboAccounts.SelectedIndex = -1;
             }
             else
             {
-                this.Text = "Modify Vendor";
+                this.Text = "Modify Vendor Summary";
                 this.DisplayVendorData();
             }
         }
@@ -82,9 +83,19 @@ namespace VendorMaintenance
             if (vendor.Phone == "")
                 txtPhone.Text = "";
             else
-                txtPhone.Text = FormattedPhoneNumber(vendor.Phone);
+            txtPhone.Text = FormattedPhoneNumber(vendor.Phone);
             txtFirstName.Text = vendor.ContactFName;
             txtLastName.Text = vendor.ContactLName;
+
+            /*
+             *VendorSummary textboxs 
+             */
+            txtSumOfInvoices.Text = vendorSummary.SumOfInvoices.ToString();
+            txtLastInvoiceDate.Text = vendorSummary.LastInvoiceDate.ToString();
+            txtSumOfPayments.Text = vendorSummary.SumOfPayments.ToString();
+            txtLastPaymentDate.Text = vendorSummary.LastPaymentDate.ToString();
+            txtSumOfCredits.Text = vendorSummary.SumOfCredits.ToString();
+            txtBalanceDue.Text = vendorSummary.BalanceDue.ToString();
         }
 
         private string FormattedPhoneNumber(string phone)
@@ -98,11 +109,29 @@ namespace VendorMaintenance
         {
             if (IsValidData())
             {
-                if (addVendor)
+                if (addVendorSummary)
                 {
                     vendor = new Vendor();
+                    vendorSummary = new VendorsSummary();
                     this.PutVendorData(vendor);
+                    this.putVendorSummaryData(vendorSummary, vendor.VendorID);
+                    /**
+                     * Submit Vendor
+                     */ 
                     DataContext.payables.Vendors.InsertOnSubmit(vendor);
+                    try
+                    {
+                        DataContext.payables.SubmitChanges();
+                        this.DialogResult = DialogResult.OK;
+                    }catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, ex.GetType().ToString());
+                    }
+
+                    /**
+                     * Submit Vendor Summary, Into Vendor
+                     */ 
+                    DataContext.payables.VendorsSummaries.InsertOnSubmit(vendorSummary);
                     try
                     {
                         DataContext.payables.SubmitChanges();
@@ -116,6 +145,7 @@ namespace VendorMaintenance
                 else
                 {
                     this.PutVendorData(vendor);
+                    this.putVendorSummaryData(vendorSummary, vendor.VendorID);
                     try
                     {
                         DataContext.payables.SubmitChanges();
@@ -194,6 +224,16 @@ namespace VendorMaintenance
             vendor.Phone = txtPhone.Text.Replace(".", "");
             vendor.ContactFName = txtFirstName.Text;
             vendor.ContactLName = txtLastName.Text;
+        }
+
+        private void putVendorSummaryData(VendorsSummary venSum, int vendorID) {
+            venSum.VendorID = vendorID;
+            venSum.SumOfInvoices = Convert.ToDecimal(txtSumOfInvoices.Text);
+            venSum.LastInvoiceDate = Convert.ToDateTime(txtLastInvoiceDate.Text);
+            venSum.SumOfPayments = Convert.ToDecimal(txtSumOfPayments.Text);
+            venSum.LastPaymentDate = Convert.ToDateTime(txtLastPaymentDate.Text);
+            venSum.SumOfCredits = Convert.ToDecimal(txtSumOfCredits.Text);
+            venSum.BalanceDue = Convert.ToDecimal(txtBalanceDue.Text);
         }
     }
 }
