@@ -85,6 +85,12 @@
     <Compile Include="frmAddModifyVendor.Designer.cs">
       <DependentUpon>frmAddModifyVendor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmState.Designer.cs">
+      <DependentUpon>frmState.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVendorMaintenance.cs">
       <SubType>Form</SubType>
     </Compile>
