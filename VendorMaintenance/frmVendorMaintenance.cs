@@ -140,5 +140,23 @@ namespace VendorMaintenance
             var newForm = new frmInvoice();
             newForm.ShowDialog();
         }
+
+        private void btnGoToTerm_Click(object sender, EventArgs e)
+        {
+            var newForm = new frmTerm();
+            newForm.ShowDialog();
+        }
+
+        private void btnGoToState_Click(object sender, EventArgs e)
+        {
+            var newForm = new frmState();
+            newForm.ShowDialog();
+        }
+
+        private void frmGoToVendorSummary_Click(object sender, EventArgs e)
+        {
+            var newForm = new frmSummaryVendor();
+            newForm.ShowDialog();
+        }
     }
 }

@@ -47,6 +47,9 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.btnGoToInvoice = new System.Windows.Forms.Button();
+            this.btnGoToTerm = new System.Windows.Forms.Button();
+            this.btnGoToState = new System.Windows.Forms.Button();
+            this.frmGoToVendorSummary = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -225,7 +228,7 @@
             // 
             // btnGoToInvoice
             // 
-            this.btnGoToInvoice.Location = new System.Drawing.Point(136, 234);
+            this.btnGoToInvoice.Location = new System.Drawing.Point(12, 234);
             this.btnGoToInvoice.Name = "btnGoToInvoice";
             this.btnGoToInvoice.Size = new System.Drawing.Size(75, 23);
             this.btnGoToInvoice.TabIndex = 51;
@@ -233,12 +236,45 @@
             this.btnGoToInvoice.UseVisualStyleBackColor = true;
             this.btnGoToInvoice.Click += new System.EventHandler(this.btnGoToInvoice_Click);
             // 
+            // btnGoToTerm
+            // 
+            this.btnGoToTerm.Location = new System.Drawing.Point(93, 234);
+            this.btnGoToTerm.Name = "btnGoToTerm";
+            this.btnGoToTerm.Size = new System.Drawing.Size(75, 23);
+            this.btnGoToTerm.TabIndex = 52;
+            this.btnGoToTerm.Text = "Term";
+            this.btnGoToTerm.UseVisualStyleBackColor = true;
+            this.btnGoToTerm.Click += new System.EventHandler(this.btnGoToTerm_Click);
+            // 
+            // btnGoToState
+            // 
+            this.btnGoToState.Location = new System.Drawing.Point(174, 234);
+            this.btnGoToState.Name = "btnGoToState";
+            this.btnGoToState.Size = new System.Drawing.Size(75, 23);
+            this.btnGoToState.TabIndex = 53;
+            this.btnGoToState.Text = "State";
+            this.btnGoToState.UseVisualStyleBackColor = true;
+            this.btnGoToState.Click += new System.EventHandler(this.btnGoToState_Click);
+            // 
+            // frmGoToVendorSummary
+            // 
+            this.frmGoToVendorSummary.Location = new System.Drawing.Point(255, 234);
+            this.frmGoToVendorSummary.Name = "frmGoToVendorSummary";
+            this.frmGoToVendorSummary.Size = new System.Drawing.Size(104, 23);
+            this.frmGoToVendorSummary.TabIndex = 54;
+            this.frmGoToVendorSummary.Text = "Vendor Summary";
+            this.frmGoToVendorSummary.UseVisualStyleBackColor = true;
+            this.frmGoToVendorSummary.Click += new System.EventHandler(this.frmGoToVendorSummary_Click);
+            // 
             // frmVendorMaintenance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(380, 262);
+            this.ClientSize = new System.Drawing.Size(372, 262);
+            this.Controls.Add(this.frmGoToVendorSummary);
+            this.Controls.Add(this.btnGoToState);
+            this.Controls.Add(this.btnGoToTerm);
             this.Controls.Add(this.btnGoToInvoice);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnDelete);
@@ -288,6 +324,9 @@
         internal System.Windows.Forms.TextBox txtName;
         internal System.Windows.Forms.Label Label2;
         private System.Windows.Forms.Button btnGoToInvoice;
+        private System.Windows.Forms.Button btnGoToTerm;
+        private System.Windows.Forms.Button btnGoToState;
+        private System.Windows.Forms.Button frmGoToVendorSummary;
     }
 }
 
